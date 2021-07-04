@@ -1,7 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Xamarin.CommunityToolkit.Extensions;
+using System.Threading.Tasks;
+using Plugin.LocalNotification;
 
 namespace Ember.Views
 {
@@ -10,6 +12,10 @@ namespace Ember.Views
         public AboutPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
         }
     }
 }

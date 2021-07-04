@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using Plugin.LocalNotification;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -16,7 +17,16 @@ namespace Ember.ViewModels
 
         private async Task NotifyAsync()
         {
-            await Task.CompletedTask;
+            var notification = new NotificationRequest()
+            {
+                BadgeNumber = 1,
+                Description = "Ember days are coming up!",
+                Title = "Ember reminder",
+                ReturningData = string.Empty,
+                NotificationId = 123,
+            };
+
+            await NotificationCenter.Current.Show(notification);
         }
     }
 }

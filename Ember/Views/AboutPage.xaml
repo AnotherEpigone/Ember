@@ -30,7 +30,8 @@
                 </Label.FormattedText>
             </Label>
             <Button Margin="0,10,0,0" Text="Toast me"
-                        Command="{Binding OpenWebCommand}"
+                        Command="{Binding ToastCommand}"
+                        Clicked="Button_Clicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
         </StackLayout>

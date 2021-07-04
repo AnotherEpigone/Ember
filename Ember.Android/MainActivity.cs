@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Xamarin.Forms;
+using Plugin.LocalNotification;
 
 namespace Ember.Droid
 {
@@ -14,6 +15,8 @@ namespace Ember.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            NotificationCenter.CreateNotificationChannel();
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);

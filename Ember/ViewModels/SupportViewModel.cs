@@ -1,16 +1,13 @@
 ﻿using Ember.Views;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 
 namespace Ember.ViewModels
 {
-    public class LoginViewModel : BaseViewModel
+    public class SupportViewModel : BaseViewModel
     {
         public Command LoginCommand { get; }
 
-        public LoginViewModel()
+        public SupportViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
         }
